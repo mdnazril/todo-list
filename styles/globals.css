@@ -1,16 +1,85 @@
 html,
 body {
-  padding: 0;
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(131,149,210,1) 75%);}
 
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.headerText{
+  padding-top: 3vh;
+}
+.backGround, form{
+  display: flex;
+}
+.backGround{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+form{
+  flex-direction: row;
+  margin: 5vw auto;
+  padding:0 5px;
+  background-color:inherit ;
+  border-radius: 5%;
+  gap: 1rem;
+}
+form input{
+  width: 300px;
+  height:50px;
+  border-radius: 5px;
+  border: transparent;
+}
+button{
+  background-color: #00809A;
+  color: #fff;
+  font-weight: 700;
+  border: transparent;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover{
+  cursor: pointer;
+}
+.taskList{
+  padding: 10px 20vw;
+  margin-bottom: 2px ;
+  border: 1px solid transparent;
+  background-color: #00809A;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  min-width: 50vw;
+}
+.taskList p{
+  cursor: context-menu;
+}
+.taskList:last-child{
+  margin-bottom: 3vh;
+}
+.taskList:hover{
+  border: 1px solid black;
+}
+
+@media (max-width: 768px){
+  form{
+    flex-direction: column;
+  }
+  button{
+    width: 30vw;
+    padding: 1vw;
+    margin: auto;
+  }
+  form input{
+    width: 60vw;
+  }
 }
