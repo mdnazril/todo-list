@@ -16,10 +16,10 @@ body {
 .headerText{
   padding-top: 3vh;
 }
-.backGround, form{
+.containerBackGround, form{
   display: flex;
 }
-.backGround{
+.containerBackGround{
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -64,6 +64,7 @@ button:hover{
 }
 .taskList p{
   cursor: context-menu;
+  word-break: break-all;
 }
 .taskList:last-child{
   margin-bottom: 3vh;
