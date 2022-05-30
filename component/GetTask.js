@@ -10,7 +10,7 @@ const GetTask = () => {
         var localTask = JSON.parse(localStorage.getItem('task'))
     }
     useEffect(()=>{
-        if(localTask.length) setTask(localTask)
+        if(localTask.length !== null) setTask(localTask)
     },[])
 
 
