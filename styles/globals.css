@@ -38,6 +38,7 @@ form input{
   height:50px;
   border-radius: 5px;
   border: transparent;
+  padding: 2.5%;
 }
 button{
   background-color: #00809A;
@@ -46,6 +47,7 @@ button{
   border: transparent;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2.5%;
 }
 button:hover{
   cursor: pointer;
