@@ -3,15 +3,16 @@ import { useState, useEffect } from "react";
 
 const GetTask = () => {
 
+    
     const [task, setTask] = useState([]);
     const [title, setTitle] = useState('');
-   
+    // localStorage.clear();
     if(typeof window !== 'undefined') {
         var localTask = JSON.parse(localStorage.getItem('task'))
     }
     useEffect(()=>{
-        if(localTask.length !== null) setTask(localTask)
-    },[])
+        if( localTask) setTask(localTask)
+    },[task])
 
 
     const taskHandler = (e)=>{
@@ -37,7 +38,7 @@ const GetTask = () => {
 
     return (  
 
-            <div className="backGround">
+            <div className="containerBackGround">
                 <h1 className="headerText">To-Do List</h1>
             <form onSubmit={taskHandler}>
                 <input type="text" 
