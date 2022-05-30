@@ -8,10 +8,10 @@ const GetTask = () => {
     // localStorage.clear();
     if(typeof window !== 'undefined') {
         var localTask = JSON.parse(localStorage.getItem('task'))
-    }
-    useEffect(()=>{
-        if(localTask.length !== null) setTask(localTask)
-    },[])
+    setTask(localTask)}
+//     useEffect(()=>{
+//         if(localTask.length !== null) 
+//     },[])
 
 
     const taskHandler = (e)=>{
