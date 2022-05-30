@@ -5,13 +5,13 @@ const GetTask = () => {
 
     const [task, setTask] = useState([]);
     const [title, setTitle] = useState('');
-    // localStorage.clear();
+   
     if(typeof window !== 'undefined') {
         var localTask = JSON.parse(localStorage.getItem('task'))
-    setTask(localTask)}
-//     useEffect(()=>{
-//         if(localTask.length !== null) 
-//     },[])
+    }
+    useEffect(()=>{
+        if(localTask.length !== null) setTask(localTask)
+    },[])
 
 
     const taskHandler = (e)=>{
