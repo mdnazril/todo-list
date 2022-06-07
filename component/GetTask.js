@@ -12,7 +12,7 @@ const GetTask = () => {
     }
     useEffect(()=>{
         if( localTask) setTask(localTask)
-    },[task])
+    },[])
 
 
     const taskHandler = (e)=>{
@@ -42,6 +42,7 @@ const GetTask = () => {
                 <h1 className="headerText">To-Do List</h1>
             <form onSubmit={taskHandler}>
                 <input type="text" 
+                maxLength="30"
                 placeholder="Task" required
                 value={title}
                 onChange={(e)=>setTitle(e.target.value)} />
@@ -50,9 +51,13 @@ const GetTask = () => {
 
                  {task.map((tasks)=>(
                      <div className="taskList" key={tasks.id}>
-                         <p>{tasks.title}</p>
+                         <div className="taskListText">
+                         <h2>{tasks.title}</h2>
                          <p>created at {tasks.dateNow}</p>
-                         <p onClick={deleteHandler} id={tasks.id}>X</p>
+                         </div>
+                         <div className="taskListImg">
+                         <img src="/trash-solid.svg" alt="trashCan" onClick={deleteHandler} id={tasks.id} />
+                         </div>
                     </div>
             ))}
             </div>
